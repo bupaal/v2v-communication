@@ -1,18 +1,26 @@
 # 🚗 Drowsiness Detection & Alert System (Python + Arduino + Firebase)
 
-This project is a **real-time drowsiness detection system** using computer vision and machine learning.  
-It detects driver fatigue by monitoring eye landmarks, sends alerts via **Arduino**, and logs data to **Firebase**.
 
----
+This project integrates **Python (OpenCV + Dlib)**, **Arduino**, and **Firebase** to enhance road safety by detecting driver drowsiness and monitoring vehicles.
 
-## 📌 Features
-- Face & eye detection using **dlib** and **OpenCV**.
-- 68-point facial landmark detection.
-- Real-time drowsiness alert via **Arduino buzzer**.
-- Cloud data logging with **Firebase**.
-- Works with webcam or external camera.
+## 🚗 Features
+- **Face and Eye Detection**  
+  Uses OpenCV Haarcascade classifiers (`haarcascade_frontalface_default.xml`, `haarcascade_eye.xml`) and Dlib’s `shape_predictor_68_face_landmarks.dat` for real-time detection.
+  
+- **Drowsiness Detection**  
+  Calculates **Eye Aspect Ratio (EAR)** to identify prolonged eye closure, signaling possible drowsiness.
 
----
+- **Alert System**  
+  - Triggers a buzzer/alarm via Arduino.  
+  - Sends warning notifications to **Firebase**.
+
+- **Multiple Vehicle Detection**  
+  Detects multiple vehicles in camera view and flags risky driver behavior.
+
+- **Firebase Integration**  
+  Uploads driver status (**Normal / Drowsy / Alert**) to Firebase Realtime Database for cloud-based monitoring.
+
+
 
 ## 📂 Required Files
 Make sure you have these files before running:
